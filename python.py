@@ -60,7 +60,7 @@ random.shuffle(questions)
 
 score = 0
 
-print("WELCOME TO THE QUIZ")
+print("WELCOME TO THIS QUIZ TEST")
 
 # Loop through each question
 for number, question in enumerate(questions, start=1):
@@ -73,9 +73,9 @@ for number, question in enumerate(questions, start=1):
      # Continue asking until the user enters A, B, C or D
     while True:
         try:
-            user_answer = input("Enter your answer (A, B, C or D): ").upper()
+            user_choice = input("Enter your answer (A, B, C or D): ").upper()
 
-            if user_answer not in ["A", "B", "C", "D"]:
+            if user_choice not in ["A", "B", "C", "D"]:
                 raise ValueError
 
             break
@@ -84,15 +84,15 @@ for number, question in enumerate(questions, start=1):
             print("Invalid input. Please enter A, B, C or D.")
     
     # Check whether the answer is correct
-    if user_answer == question["answer"]:
+    if user_choice == question["answer"]:
         print("Correct!")
         score += 1
     else:
-        correct_letter = question["answer"]
-        correct_choice = question["choices"][correct_letter]
+        correct_answer = question["answer"]
+        correct_choice = question["choices"][correct_answer]
 
         print("Incorrect.")
-        print(f"The correct answer is {correct_letter}. {correct_choice}")
+        print(f"The correct answer is {correct_answer}. {correct_choice}")
 
 
 # Display final score
