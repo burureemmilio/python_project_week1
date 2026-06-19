@@ -100,6 +100,7 @@ total_questions = len(questions)
 
 print(f"Your score is {score}/{total_questions}")
 
+#Give remarks
 if score == 5:
     print("Excellent")
 elif score == 4:
